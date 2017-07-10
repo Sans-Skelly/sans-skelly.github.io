@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!--ok sorry for maxcdn links rn im going to add my cdn links soon just using it for development don't fret history onlooker, or present onlooker -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 body {
@@ -68,6 +72,36 @@ p {
     color: white;
 	text-shadow:2px 2px black ;
 }
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.buttongrey {
+	background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+/* you may ask why i did all the css crap here. its because im lazy and it takes 10 years for github pages to update lmao */
     </style>
 <script>
 function onReady(callback) {
@@ -93,11 +127,12 @@ onReady(function () {
 </script>
 </head>
 <body>
-    <div id="page">
-        <h1 class="titlemain">ohai welcome to the cdn</h1>
-        <br>
-        <h3 class="subtext">down below are the cdns of some the best css customizers like Bootstrap, or js libs like jQuery. right now hosted on github. if you help donate, i will invent in faster servers for the CDN.</h3>
-        
+   <div id="page">
+	<div class="container">
+       		 <h1 class="titlemain">Christguru CDN</h1>
+      		  <br>
+      		  <h3 class="subtext">Currently hosted on  Github, down below are the cdns of some the best css customizers like Bootstrap, or js libs like jQuery. right now hosted on github. if you help donate, i will invent in faster servers for the CDN. (tbh github is pretty blazing fast kek)</h3>
+	 </div>
 <div class="menu">
   <ul>
     <li onclick='window.location.href="bootstrap.htm"'>Bootstrap</li>
@@ -105,12 +140,19 @@ onReady(function () {
 	<li onclick='window.location.href="w3css.htm"'>W3.CSS</li>
     <li onclick='window.location.href="angularjs.htm"'>Angular.JS</li>
     <li onclick='window.location.href="cgcss.htm"'>CG.CSS</li>
-	<li onclick='window.location.href="https://mirror.christguru.com/redirect/forums.php"'>Want more? go to my forums. (sadly not located on here, you'll have to go thru the mirror :/li>
+	<li onclick='window.location.href="https://mirror.christguru.com/redirect/forums.php"'>Want more? go to my forums. (sadly not located on here, you'll have to go thru the mirror :/</li>
   </ul>
 </div>
-    </div>
 
-<div id="loading"></div>
+
+
+
+
 </body>
-
+<div class="footer">
+<p class="pwhitecolor">Website by</p>
+<button class="button buttongrey" onclick="window.location.href='https://christguru.com'">christguru.com</button>
+</div>
+</div>
+<div id="loading"></div>
 </html>
