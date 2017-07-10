@@ -2,8 +2,9 @@
 <html>
 <head>
 <style>
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 body {
-    font-family:"Arial"
+    font-family:"Josefin Sans"
 }
 h1 {
     font-size: 2em;
@@ -31,6 +32,28 @@ p {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.subtext {
+        font-size: 20px;    
+        text-align: center;
+        padding: 0.5em;
+    }
+
+.titlemain {
+        font-size: 36px;
+        text-align: center;
+        padding: 0.5em;
+
+    
+    }
+
+button.cdn {
+    
+    margin: auto;
+    color: black;
+    background-color: white;
+    
+}
     </style>
 <script>
 function onReady(callback) {
@@ -57,9 +80,16 @@ onReady(function () {
 </head>
 <body>
     <div id="page">
-        <p>test</p>
-
+        <h1 class="titlemain">ohai welcome to the cdn</h1>
+        <br>
+        <h3 class="subtext">down below are the cdns of some the best css customizers like Bootstrap, or js libs like jQuery. right now hosted on github. if you help donate, i will invent in faster servers for the CDN.</h3>
+        
+        <button class="cdn">Bootstrap</button>
+        <button class="cdn">W3.CSS</button>
+        <button class="cdn">jQuery</button>
+        <button class="cdn">CG.CSS [in development] [currently my newest css package]</button>
     </div>
+
 <div id="loading"></div>
 </body>
 
