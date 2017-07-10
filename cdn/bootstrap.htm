@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--ok fixed stop worriying 
+also i wonder if i could host google fonts.. that would be cool.-->
+<link rel="stylesheet" href="https://sans-skelly.github.io/cdn/upload_files/bootstrap.min.css">
+<script src="https://sans-skelly.github.io/cdn/upload_files/jquery.min.js"></script>
+<script src="https://sans-skelly.github.io/cdn/upload_files/bootstrap.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+body {
+    font-family:"Josefin Sans"
+}
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.2em;
+    padding-bottom: 0;
+}
+p {
+    font-size: 1.5em;
+    margin-top: 0;
+    padding-top: 0;
+}
+#page {
+    display: none;
+}
+#loading {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(192, 192, 192, 0.5);
+    background-image: url("https://sans-skelly.github.io/ajax_images/ajax-loader.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.subtext {
+        font-size: 20px;    
+        text-align: center;
+        padding: 0.5em;
+    }
+h2.subtext {
+        font-size: 30px;    
+        text-align: center;
+        padding: 0.5em;
+    }
+.titlemain {
+        font-size: 36px;
+        text-align: center;
+        padding: 0.5em;
+    
+    }
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #0051ff;
+    color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+	text-decoration: none;
+	text-shadow:2px 2px black ;
+}
+.menu li:hover {
+	background-color: #555555;
+    color: white;
+	text-shadow:2px 2px black ;
+}
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.buttongrey {
+	background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+.buttongrey:hover {
+    background-color: #555555;
+    color: white;
+}
+/* you may ask why i did all the css crap here. its because im lazy and it takes 10 years for github pages to update lmao */
+    </style>
+<script>
+function onReady(callback) {
+    var intervalID = window.setInterval(checkReady, 5000);
+    function checkReady() {
+        if (document.getElementsByTagName('body')[0] !== undefined) {
+            window.clearInterval(intervalID);
+            callback.call(this);
+        }
+    }
+}
+function show(id, value) {
+    document.getElementById(id).style.display = value ? 'block' : 'none';
+}
+onReady(function () {
+    show('page', true);
+    show('loading', false);
+});
+</script>
+</head>
+<body>
+   <div id="page">
+	<div class="container">
+       		 <h1 class="titlemain">Bootstrap</h1>
+      		  <br>
+      		  <h3 class="subtext">Bootstrap is a mobile optimized .css file package that helps with optimization. </h3>
+	 </div>
+  <div class="container">
+    <h2 class="subtext">Documentation: </h2>
+  
+  </div>
+
+<div class="container">
+  <h1 class="titlemain">How to add bootstrap to my code?</h1>
+  <h3 class="subtext">Copy and paste the code into the head of your HTML / PHP file.</h3>
+  <br>
+  <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://sans-skelly.github.io/cdn/upload_files/bootstrap.min.css&quot;&gt;
+  &lt;script src=&quot;https://sans-skelly.github.io/cdn/upload_files/bootstrap.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+<br>
+<h3>Want to try out some other libs? Click the links below.</h3>
+</div>
+ 
+
+
+<div class="menu">
+  <ul>
+    <li onclick='window.location.href="index.htm"'>Home</li>
+    <li onclick='window.location.href="bootstrap.htm"'>Bootstrap</li>
+	<li onclick='window.location.href="jQuery.htm"'>jQuery</li>
+	<li onclick='window.location.href="w3css.htm"'>W3.CSS</li>
+    <li onclick='window.location.href="angularjs.htm"'>Angular.JS</li>
+    <li onclick='window.location.href="cgcss.htm"'>CG.CSS</li>
+	<li onclick='window.location.href="https://mirror.christguru.com/redirect/forums.php"'>Want more? go to my forums. (sadly not located on here, you'll have to go thru the mirror :/</li>
+  </ul>
+</div>
+
+
+
+
+
+</body>
+<div class="footer">
+<p class="pwhitecolor">Website by</p>
+<button class="button buttongrey" onclick="window.location.href='https://christguru.com'">christguru.com</button>
+</div>
+</div>
+<div id="loading"></div>
+</html>
