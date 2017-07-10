@@ -1,27 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+body {
+    font-family:"Brush Script MT", cursive;
+}
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.2em;
+    padding-bottom: 0;
+}
+p {
+    font-size: 1.5em;
+    margin-top: 0;
+    padding-top: 0;
+}
+#page {
+    display: none;
+}
+#loading {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(192, 192, 192, 0.5);
+    background-image: url("https://sans-skelly.github.io/ajax_images/ajax-loader.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+    </style>
 </head>
 <body>
-<button id="save">content</button>
-<div id="loading"></div>
+
+<p>test</p>
 
 <script>
-$('#save').click(function () {
-    // add loading image to div
-    $('#loading').html('<img src="ajax_images/spinner.gif"> loading...');
-    
-    // run ajax request
-    $.ajax({
-        type: "GET",
-        dataType: "json",
-        url: "#",
-        success: function (d) {
-            // replace div's content with returned data
-            $('#loading').html(d);
+function onReady(callback) {
+    var intervalID = window.setInterval(checkReady, 1000);
+
+    function checkReady() {
+        if (document.getElementsByTagName('body')[0] !== undefined) {
+            window.clearInterval(intervalID);
+            callback.call(this);
         }
-    });
+    }
+}
+
+function show(id, value) {
+    document.getElementById(id).style.display = value ? 'block' : 'none';
+}
+
+onReady(function () {
+    show('page', true);
+    show('loading', false);
 });
+
 </script>
 </body>
 
