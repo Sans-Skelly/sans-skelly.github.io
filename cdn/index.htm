@@ -4,6 +4,27 @@
 </head>
 <body>
 <p>TEST</p>
+
+<button id="save">content</button>
+<div id="loading"></div>
+
+<script>
+$('#save').click(function () {
+    // add loading image to div
+    $('#loading').html('<img src="ajax_images/spinner.gif"> loading...');
+    
+    // run ajax request
+    $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: "#",
+        success: function (d) {
+            // replace div's content with returned data
+            $('#loading').html(d);
+        }
+    });
+});
+</script>
 </body>
 
 </html>
