@@ -47,31 +47,31 @@ p {
     
     }
 
-button.cdn{
-  margin:auto;
-  display:block;
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
-
-/* BUTTON STYLES */
-button.cdn{
-  padding:16px 32px;
-  font-size:16px;
-  font-weight:100;
-  color:white;
-  text-shadow: 2px 2px black;  
-  background: #0051ff;
-  border:0;
-  font-weight:100;
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #0051ff;
+    color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+	text-decoration: none;
+	text-shadow:2px 2px black ;
 }
-button.cdn:hover{
-  background: grey;
-  
-  
+.menu li:hover {
+	background-color: #555555;
+    color: white;
+	text-shadow:2px 2px black ;
 }
     </style>
 <script>
 function onReady(callback) {
-    var intervalID = window.setInterval(checkReady, 1000);
+    var intervalID = window.setInterval(checkReady, 5000);
 
     function checkReady() {
         if (document.getElementsByTagName('body')[0] !== undefined) {
@@ -98,10 +98,16 @@ onReady(function () {
         <br>
         <h3 class="subtext">down below are the cdns of some the best css customizers like Bootstrap, or js libs like jQuery. right now hosted on github. if you help donate, i will invent in faster servers for the CDN.</h3>
         
-        <button class="cdn">Bootstrap</button>
-        <button class="cdn">W3.CSS</button>
-        <button class="cdn">jQuery</button>
-        <button class="cdn">CG.CSS [in development] [currently my newest css package]</button>
+<div class="menu">
+  <ul>
+    <li onclick='window.location.href="index.html"'>Bootstrap</li>
+	<li onclick='window.location.href="ourdogs.html"'>jQuery</li>
+	<li onclick='window.location.href="#"'>W3.CSS</li>
+    <li onclick='window.location.href="shop.html"'>Angular.JS</li>
+    <li onclick='window.location.href="aboutus.html"'>CG.CSS</li>
+	<li onclick='window.location.href="forums.php"'>Want more? go to my forums. (convienently located on github pages)</li>
+  </ul>
+</div>
     </div>
 
 <div id="loading"></div>
